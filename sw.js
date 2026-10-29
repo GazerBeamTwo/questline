@@ -1,5 +1,5 @@
 /* Questline service worker: offline app shell + gentle weekly reminder. */
-const VERSION = 'questline-v1.0.0';
+const VERSION = 'questline-v1.1.0';
 const ASSETS = [
   './',
   './index.html',
@@ -18,7 +18,7 @@ const ASSETS = [
 ];
 
 self.addEventListener('install', (event) => {
-  event.waitUntil(caches.open(VERSION).then((c) => c.addAll(ASSETS)).then(() => self.skipWaiting()));
+  event.waitUntil(caches.open(VERSION).then((c) => c.addAll(ASSETS.map((u) => new Request(u, { cache: 'reload' })))).then(() => self.skipWaiting()));
 });
 
 self.addEventListener('activate', (event) => {
