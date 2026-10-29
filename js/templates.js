@@ -77,5 +77,51 @@ const PACKS = [
       ['course', 'Finish an online course', 'experience', 'Career', 'All the way to the end.', []],
       ['teach', 'Teach someone something you learned', 'experience', 'Social', 'The best test of understanding.', ['course']]
     ]
+  },
+  {
+    id: 'fun', name: 'Fun Experiences', tree: 'Fun', isNew: true,
+    blurb: 'Thrills, heights, live music and stories you will tell for years.',
+    nodes: [
+      ['themepark', 'Go to a theme park', 'experience', 'Adventure', 'A full day of rides, snacks and queues worth it.', []],
+      ['coaster', 'Ride the biggest rollercoaster in the park', 'experience', 'Adventure', 'Front row if you dare.', ['themepark']],
+      ['ropes', 'Conquer a high ropes course', 'experience', 'Adventure', 'Get comfortable being up high.', []],
+      ['indoorsky', 'Try indoor skydiving', 'experience', 'Adventure', 'Learn what freefall feels like in a wind tunnel.', ['ropes']],
+      ['skydive', 'Go skydiving', 'experience', 'Adventure', 'A tandem jump counts. Look down once you are out.', ['indoorsky']],
+      ['bungee', 'Do a bungee jump', 'experience', 'Adventure', 'The final boss of heights.', ['skydive']],
+      ['balloon', 'Ride a hot air balloon at sunrise', 'experience', 'Adventure', 'Quiet, slow and unforgettable.', ['ropes']],
+      ['surf', 'Surfing', 'skill', 'Body', 'Paddling, popping up, reading waves.', []],
+      ['greenwave', 'Ride an unbroken green wave', 'experience', 'Body', 'Past the whitewash and along the face.', ['surf']],
+      ['snow', 'Skiing or snowboarding', 'skill', 'Body', 'From the beginner slope upwards.', []],
+      ['blackrun', 'Ski or board a black run', 'experience', 'Adventure', 'Top to bottom, in one piece.', ['snow']],
+      ['whaleshark', 'Swim with whale sharks', 'experience', 'Adventure', 'Ningaloo Reef, or anywhere they gather.', ['surf']],
+      ['festival', 'Go to a music festival', 'experience', 'Social', 'Camp, dance, find a new favourite band.', ['concert']],
+      ['concert', 'See your favourite artist live', 'experience', 'Social', 'Sing every word.', []],
+      ['escape', 'Beat an escape room', 'experience', 'Social', 'With time on the clock.', []],
+      ['gokart', 'Race go-karts with friends', 'experience', 'Social', 'Bragging rights included.', ['escape']],
+      ['karaoke', 'Sing karaoke in front of strangers', 'experience', 'Social', 'Pick a song and commit.', []],
+      ['comedy', 'Do a stand-up comedy open mic', 'experience', 'Creativity', 'Five minutes of your own material.', ['karaoke']]
+    ]
+  },
+  {
+    id: 'world', name: 'Travel the World', tree: 'World Travel', isNew: true,
+    blurb: 'Passport stamps, great cities and once-in-a-lifetime places.',
+    nodes: [
+      ['passport', 'Get your passport sorted', 'experience', 'Life Admin', 'Valid for at least six months past your trip.', []],
+      ['phrases', 'Learn 20 phrases in a local language', 'knowledge', 'Mind', 'Hello, thank you, sorry, where is…, how much…', []],
+      ['travelhack', 'Travel planning', 'skill', 'Life Admin', 'Cheap flights, points, itineraries and packing light.', []],
+      ['tokyo', 'Explore Tokyo', 'experience', 'Adventure', 'Neon, shrines, train stations and ramen.', ['passport']],
+      ['paris', 'See Paris', 'experience', 'Adventure', 'Croissants, galleries and the city at night.', ['passport']],
+      ['nyc', 'Walk across the Brooklyn Bridge in New York', 'experience', 'Adventure', 'Then get a slice.', ['passport']],
+      ['rome', 'Eat your way through Rome', 'experience', 'Adventure', 'Carbonara, gelato, repeat.', ['paris']],
+      ['cookabroad', 'Take a cooking class abroad', 'experience', 'Creativity', 'Bring a local dish home with you.', ['rome', 'phrases']],
+      ['solo', 'Take a solo trip', 'experience', 'Adventure', 'Just you and wherever you end up.', ['passport']],
+      ['eurorail', 'Backpack Europe by train', 'experience', 'Adventure', 'Five or more countries on one rail trip.', ['paris']],
+      ['nz', 'Road trip New Zealand', 'experience', 'Adventure', 'Mountains, lakes and a campervan.', ['solo']],
+      ['northernlights', 'See the Northern Lights', 'experience', 'Adventure', 'Norway, Iceland, Finland or Canada, on a clear dark night.', ['solo']],
+      ['safari', 'Go on an African safari', 'experience', 'Adventure', 'Dawn game drives and big skies.', ['passport', 'travelhack']],
+      ['machu', 'Hike to Machu Picchu', 'experience', 'Body', 'The Inca Trail, or the scenic way up.', ['solo']],
+      ['traveljournal', 'Keep a journal for a whole trip', 'experience', 'Creativity', 'An entry every day, start to finish.', ['solo']],
+      ['continents', 'Set foot on 5 continents', 'experience', 'Adventure', 'Asia, Europe, the Americas, Africa and home.', ['tokyo', 'paris', 'nyc', 'safari']]
+    ]
   }
 ];

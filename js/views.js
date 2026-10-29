@@ -592,7 +592,7 @@ function vSettings() {
     </section>
     <section class="card" id="packs"><h2 class="sec-h">Starter templates</h2>
       <p class="muted small">Add a pre-built tree. You can edit or delete any node afterwards.</p>
-      <div class="list">${PACKS.map((p) => `<div class="set-row"><div><b>${p.name}</b><span class="muted small">${p.blurb}</span></div><button class="btn ghost small" data-pack="${p.id}">Add</button></div>`).join('')}</div>
+      <div class="list">${PACKS.map((p) => { const added = S.trees.some((t) => t.pack === p.id); return `<div class="set-row"><div><b>${p.name}${p.isNew && !added ? ' <span class="beta">new</span>' : ''}</b><span class="muted small">${p.blurb}${added ? ' · ✓ Added' : ''}</span></div><button class="btn ${added ? 'ghost' : 'primary'} small" data-pack="${p.id}">${added ? 'Add again' : 'Add'}</button></div>`; }).join('')}</div>
     </section>
     <section class="card"><h2 class="sec-h">Shared trees <span class="beta">optional</span></h2>
       <div class="set-row"><div><b>Enable shared trees</b><span class="muted small">Unlock a bucket list together with a partner or friends by swapping tree files. Off by default; everything else stays private.</span></div><label class="switch"><input type="checkbox" id="social" ${s.social ? 'checked' : ''}><i></i></label></div>
