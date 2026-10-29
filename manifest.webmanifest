@@ -1,0 +1,22 @@
+{
+  "name": "Questline",
+  "short_name": "Questline",
+  "description": "A journal that levels you up: turn your bucket list into a skill tree, and every entry is proof you've grown.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#121019",
+  "theme_color": "#121019",
+  "categories": ["lifestyle", "productivity"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "New entry", "short_name": "New entry", "url": "./#/entry/new", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Skill tree", "short_name": "Tree", "url": "./#/tree", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}
